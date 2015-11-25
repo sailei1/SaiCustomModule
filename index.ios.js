@@ -23,6 +23,7 @@ var {
   StyleSheet,
   Text,
   View,
+  AlertIOS,
 } = React;
 
 var TouchableHighlight = require('TouchableHighlight');
@@ -58,6 +59,8 @@ var example = React.createClass({
     }, (error, event) => {
         if(error) {
           AlertIOS.alert('Error', 'Could not send mail. Please send a mail to support@example.com');
+        }else{
+          AlertIOS.alert('success','mail');
         }
     });
   }, 
